@@ -34,12 +34,12 @@ router.beforeEach((to, from, next) => {
 	    to.path !== '/' && history.setItem(to.path, historyCount);
 	    store.commit('UPDATE_DIRECTION', {direction: 'forward'})
 	}
-  
+
     Util.title(to.meta.title);
-    
+
     //console.log(to)
     if (to.meta.requireAuth) { // 判断该路由是否需要登录权限
-    	
+
 	   if(Cookies.get('userInfo')){	//已经登录
 	   		if(to.name === 'login'){
 	   			next({
@@ -61,4 +61,3 @@ router.beforeEach((to, from, next) => {
 		}
     }
 })
-

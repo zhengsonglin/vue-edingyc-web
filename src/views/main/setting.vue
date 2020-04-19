@@ -45,7 +45,9 @@
 				</div>
 			</scroll>
 		</div>
-		<router-view></router-view>
+		<transition name="vux-slide">
+			<router-view></router-view>
+		</transition>
 	</div>
 </template>
 
