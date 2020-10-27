@@ -1,4 +1,6 @@
 import Mock from 'mockjs'
+// 【****mock拦截时请求url是完全匹配, 如果是get请求时url携带参数需要用正则匹配，否则404***】
+
 
 // 获取 mock.Random 对象
 const Random = Mock.Random
@@ -16,6 +18,11 @@ Mock.setup({
 var obj = {'aa':'11', 'bb':'22', 'cc':'33', 'dd':'44'};
 
 //Mock.mock('/news/index', 'post', produceNewsData);   //可以指定post或get类型
+
+//get请求时url携带参数需要使用正则匹配，否则404
+Mock.mock(new RegExp('/testParam/testA' + '.*'), 'get', {
+	"test": 666
+})
 
 // Mock响应模板
 Mock.mock('/test/test', {
