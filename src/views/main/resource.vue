@@ -71,7 +71,7 @@
 	import {imageMixin} from '@/libs/mixin'
 	export default {
 	  mixins:[imageMixin],
-	  name: 'App',
+	  name: 'resource',
 	  components:{
 	  	mHeader,
 	  	mNav

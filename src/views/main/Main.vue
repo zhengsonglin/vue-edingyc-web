@@ -1,20 +1,20 @@
 <template>
 	<div class="wrap">
-		<footerNav></footerNav>
+		<footer-nav></footer-nav>
 		<router-view></router-view>
 	</div>
 </template>
 
 <script>
-	import footerNav from '@/views/footerNav/footerNav'
+	import FooterNav from '../footerNav/footerNav'
 	export default {
-	  name: 'App',
+	  name: 'main',
 	  components:{
-	  	footerNav:footerNav
+	  	FooterNav
 	  }
 	}
 </script>
-	
+
 <style>
 	.wrap{
 		width:100%;

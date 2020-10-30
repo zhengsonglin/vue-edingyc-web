@@ -1,23 +1,3 @@
-import Main from '@/views/main/Main'
-
-/*const Login = ((resolve)=>{
-	import('@/views/login/Login').then((login)=>{
-		resolve(login)
-	})
-})
-
-const PhoneLogin = ((resolve)=>{
-	import('@/views/login/PhoneLogin').then((res)=>{
-		resolve(res)
-	})
-})
-
-const PhoneLogin = ((resolve)=>{
-	import('@/views/login/PhoneLogin').then((res)=>{
-		resolve(res)
-	})
-})
-*/
 export const login = {
   path: '/login',
   name: 'login',
@@ -253,25 +233,6 @@ export const main = {
     }
   ]
 }
-/*
-export const quotation = {
-	path: '/quotation',
-    name: 'quotation',
-    meta: {
-        requireAuth: true,
-    },
-    component:() => import('@/views/main/quotation')
-}
-
-
-export const order = {
-	path: '/order',
-    name: 'order',
-    meta: {
-        requireAuth: true,
-    },
-    component:() => import('@/views/main/order')
-}*/
 
 export const routers = [
   login,

@@ -14,14 +14,14 @@
 		</div>
 		<div class="nav-item">
 		    <tab >
-		      <tab-item  v-for="(item, index) in navItems" @on-item-click="onItemClick(item, index)" :selected="index===0" :class="{'vux-1px-r':index!=navItems.length-1}">{{item.text}}</tab-item>
+		      <tab-item  v-for="(item, index) in navItems" @on-item-click="onItemClick(item, index)" :selected="index===0" :class="{'vux-1px-r':index!=navItems.length-1}" :key="index">{{item.text}}</tab-item>
 		      <!--selected-->
 		    </tab>
 		</div>
 		<div class="content w750">
 			<div id="orderMescroll" class="mescroll"> 
             	<div class="item-list">
-					<div class="order-item" v-for="item in dataList" @click="linkToDetail">
+					<div class="order-item" v-for="(item, num) in dataList" :key="num" @click="linkToDetail">
 						<div class="item-top">
 		          			<span class="fl">{{item.time}}</span>
 		          			<span class="fr">{{item.logistics}}</span>

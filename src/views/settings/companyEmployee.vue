@@ -30,7 +30,7 @@
 				      </flexbox-item>
 				    </flexbox>
 			    </box>
-			    <box gap="0 10px" class="bottom-line" v-for="item in list">
+			    <box gap="0 10px" class="bottom-line" v-for="(item, index) in list" :key="index">
 			    	<flexbox :gutter="0">
 				      <flexbox-item :span="15/100"><div class="flex-demo headpic"><img src="../../images/settings/cusLogo.jpg"/></div></flexbox-item>
 				      <flexbox-item :span="32/100"><div class="flex-demo realName text-overellipsis">{{item.realName}}</div></flexbox-item>
